@@ -1,0 +1,272 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+  <link href="/dist/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+
+  <!-- component -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+
+  <main class="bg-white font-montserrat">
+    <header class="h-24 sm:h-32 flex items-center" x-data="{ open: false, links: ['Home', 'About Us', 'Info'] }">
+      <div class="container mx-auto px-6 sm:px-12 flex items-center justify-between">
+        <div class="text-black font-black text-2xl flex items-center">
+
+          <img class="h-20 w-auto" src="./assets/images/UBCOMSA LOGO_CROPPED.png" alt="">
+        </div>
+        <div class="flex items-center">
+          <nav class="text-black text-lg hidden lg:flex items-center">
+            <template x-for="link in links">
+              <a href="#" class="py-2 px-6 flex hover:text-primary" x-text="link">
+
+              </a>
+            </template>
+
+            <a href="#"
+              class="py-2 px-6 flex text-white bg-primary-600 hover:bg-white hover:text-primary hover:border-2 hover:border-primary">
+              Let's Connect
+            </a>
+          </nav>
+          <button class="lg:hidden flex flex-col" x-on:click="open = ! open">
+            <span class="w-6 h-px bg-gray-900 mb-1"></span>
+            <span class="w-6 h-px bg-gray-900 mb-1"></span>
+            <span class="w-6 h-px bg-gray-900 mb-1"></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="bg-gray-300 h-full w-10/12 fixed top-0 right-0 p-4" x-show="open">
+        <div class="text-xl">
+          <span x-on:click="open = false" class="text-3xl"><i class="lni lni-cross-circle"></i></span>
+        </div>
+
+        <div>
+          <template x-for="link in links">
+            <a href="#" class="py-2 px-6 flex hover:text-primary" x-text="link">
+
+            </a>
+          </template>
+        </div>
+      </div>
+    </header>
+    <div class="container mx-auto px-6 sm:px-12 flex flex-col-reverse sm:flex-row items-center">
+      <div class="sm:w-2/5 flex flex-col items-center md:items-start justify-center mt-8 sm:mt-0">
+        <h1 class="text-center md:text-left text-4xl lg:text-6xl leading-none mb-4"><strong
+            class="font-black ">Innovate, Connect,
+            Inspire.</strong></h1>
+        <p class="text-center md:text-left text-2xl lg:text-4xl mb-4 sm:mb-12 font-dancingscript block">Connecting
+          people to technology</p>
+        <a href="#" class="font-semibold text-lg  bg-primary hover:bg-blue-400 text-white py-3 px-10 rounded-full">Learn
+          more</a>
+      </div>
+
+      <div class="sm:w-3/5">
+        <img class="w-full" src="./assets/images/Shared workspace-pana.svg" alt="" srcset="">
+      </div>
+    </div>
+    <div class=" mx-auto px-6 sm:px-12">
+      <div class="text-center mt-3 md:mt-20 mb-10 md:mb-10">
+        <h1 class="text-lg md:text-xl lg:text-3xl text-primary font-medium">Aims & Objective</h1>
+        <p class="font-medium text-base md:text-xl lg:text-2xl">Our purpose</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 md:gap-3 mb-6">
+
+        <div class=" rounded-md">
+          <!-- component -->
+
+          <!-- Start of component -->
+          <div
+            class="max-w-sm bg-white p-6 rounded-md tracking-wide shadow-lg border-2 border-primary hover:shadow-2xl hover:scale-110 ease-out duration-300 hover:bg-primary hover:text-white">
+            <h4 id="name" class="text-xl font-semibold text-center">Connect</h4>
+            <div id="quote">
+              <p class=" text-center">Connecting current students as mentees to former students as mentors
+              </p>
+            </div>
+          </div>
+          <!-- End of component -->
+
+        </div>
+
+        <div
+          class="max-w-sm bg-white p-6 rounded-md tracking-wide shadow-lg border-2 border-primary hover:shadow-2xl hover:scale-110 ease-out duration-300 hover:bg-primary hover:text-white">
+          <h4 id="name" class="text-xl font-semibold text-center">Create</h4>
+          <div id="quote">
+            <p class=" text-center">Creating a bridge between theory and practical in the field of computer science.
+            </p>
+          </div>
+        </div>
+        <div
+          class="max-w-sm bg-white p-6 rounded-md tracking-wide shadow-lg border-2 border-primary hover:shadow-2xl hover:scale-110 ease-out duration-300 hover:bg-primary hover:text-white">
+          <h4 id="name" class="text-xl font-semibold text-center">Learn</h4>
+          <div id="quote">
+            <p class=" text-center">Get help with school work, academic advice and aid you pave a career path.
+            </p>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+
+    <!-- What we do section -->
+
+    <div class=" mx-auto px-6 sm:px-12 bg-gray-200 py-1">
+      <div class="text-center mt-3 mb-10 md:mb-10">
+
+        <h1 class="text-lg md:text-xl lg:text-3xl text-primary font-medium">Who Are We?</h1>
+      </div>
+      <div class=" mb-6 flex justify-center">
+        <div class="w-full md:w-6/12">
+          <p class="text-center">UBCOMSA department of computer science student association is a community for all
+            current and former student of computer science department of the Univerity of Buea. We are a non-profit
+            organization
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class=" mx-auto px-6 sm:px-12">
+      <div class="text-center mt-3 md:mt-20 mb-10 md:mb-10">
+
+
+        <h1 class="text-lg md:text-xl lg:text-3xl text-primary font-medium">Contact Us</h1>
+      </div>
+      <div class="text-center mb-6 flex justify-center" data-aos="flip-left" data-aos-duration="1500">
+        <div class="p-5 md:15 rounded-2xl shadow-2xl">
+          <div class="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5">
+            <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+              type="text" placeholder="First Name*" />
+            <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+              type="text" placeholder="Last Name*" />
+            <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+              type="email" placeholder="Email*" />
+            <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+              type="number" placeholder="Phone*" />
+          </div>
+          <div class="my-4">
+            <textarea placeholder="Message*"
+              class="w-full h-32 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
+          </div>
+          <div class=" flex justify-center items-center">
+            <button class="uppercase text-sm tracking-wide bg-primary text-gray-100 p-3 rounded-lg w-full 
+                          focus:outline-none focus:shadow-outline">
+              Send Message
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class=" mx-auto px-6 sm:px-12">
+      <div class="text-center mt-3 md:mt-20 mb-10 md:mb-10">
+        <h1 class="text-lg md:text-xl lg:text-3xl text-primary font-medium">Meet Our Sponsors</h1>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 md:gap-3 mb-6">
+
+        <div class=" rounded-md">
+         <img src="./assets/images/jongohub.jpg" alt="" srcset="">
+
+        </div>
+
+        
+        <div class=" rounded-md flex justify-center">
+          <img class=" h-24 w-auto" src="./assets/images/nkwa2.png" alt="" srcset="">
+ 
+         </div>
+
+         <div class=" rounded-md">
+          <img src="./assets/images/GCEBox-Logo.png" alt="" srcset="">
+ 
+         </div>
+
+
+
+      </div>
+    </div>
+
+  </main>
+  <!-- component -->
+  <footer class="flex justify-center px-4 text-gray-100 bg-primary">
+    <div class="container py-6 flex-col justify-center">
+      <h1 class="text-center text-lg font-bold lg:text-2xl">
+        Join 1,000+ other and never miss <br> out on new programs, tutorials, and more.
+      </h1>
+
+      <div class="flex justify-center items-center mt-7">
+        <a href="#"
+          class=" w-52 py-2 px-6 flex justify-center items-center text-primary bg-white text-center hover:bg-white hover:text-primary border-2 border-primary-400">
+          Let's Connect
+        </a>
+      </div>
+
+      <hr class="h-px mt-6 bg-gray-700 border-none">
+
+      <div class="flex flex-col items-center justify-between mt-6 md:flex-row">
+        <div>
+          <a href="#" class="text-xl font-bold">UB/COMSA</a>
+        </div>
+        <div class="flex mt-4 md:m-0">
+          <div class="-mx-4">
+            <a href="#" class="px-4 text-2xl"><i class="lni lni-instagram-original"></i></a>
+            <a href="#" class="px-4 text-2xl"><i class="lni lni-facebook-filled"></i></a>
+            <a href="#" class="px-4 text-2xl"><i class="lni lni-twitter-filled"></i></a>
+            <a href="#" class="px-4 text-2xl"><i class="lni lni-youtube"></i></a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+<script>
+  AOS.init();
+
+
+
+  const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'vertical',
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
+</script>
+
+</html>
